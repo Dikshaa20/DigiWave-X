@@ -1,0 +1,94 @@
+{
+  "id": "line_coding",
+  "title": "Line Coding — NRZ-L / Manchester / AMI",
+  "objective": "Generate and observe line-coded waveforms for a given bitstream.",
+  "theory_tags": ["line coding", "NRZ", "Manchester", "AMI", "DC component"],
+
+  "blocks": [
+    {
+      "id": "source",
+      "label": "Bit Source",
+      "position": { "x": 20, "y": 40 },
+      "ports": [{ "id": "out", "type": "output", "signal": "bitstream" }],
+      "inputs": [
+        {
+          "id": "bits",
+          "label": "Data Bits",
+          "type": "bitstring",
+          "default": "10110",
+          "validation": "^[01\\s]+$"
+        }
+      ]
+    },
+    {
+      "id": "encoder",
+      "label": "Line Encoder",
+      "position": { "x": 280, "y": 20 },
+      "ports": [
+        { "id": "in", "type": "input", "signal": "bitstream" },
+        { "id": "out", "type": "output", "signal": "waveform" }
+      ],
+      "inputs": [
+        {
+          "id": "scheme",
+          "label": "Encoding Scheme",
+          "type": "select",
+          "options": ["nrz", "manchester", "ami"],
+          "default": "nrz"
+        }
+      ]
+    },
+    {
+      "id": "scope",
+      "label": "Oscilloscope",
+      "position": { "x": 560, "y": 40 },
+      "ports": [{ "id": "in", "type": "input", "signal": "waveform" }],
+      "inputs": [
+        {
+          "id": "voltage",
+          "label": "Voltage (V)",
+          "type": "number",
+          "default": 1,
+          "min": 0.1,
+          "step": 0.5
+        }
+      ],
+      "display": "waveform_plot"
+    }
+  ],
+
+  "required_connections": [
+    { "from": "source.out", "to": "encoder.in" },
+    { "from": "encoder.out", "to": "scope.in" }
+  ],
+
+  "oracle": {
+    "function": "encode",
+    "args": {
+      "scheme": "encoder.scheme",
+      "bits": "source.bits",
+      "voltage": "scope.voltage"
+    }
+  },
+
+  "misconceptions": [
+    {
+      "id": "ami_polarity_reset",
+      "name": "AMI polarity reset after zeros",
+      "description": "Assuming a run of zeros resets mark polarity. AMI alternates across the whole stream regardless of intervening zeros.",
+      "detect": "ami_marks_not_alternating"
+    },
+    {
+      "id": "nrzl_vs_nrzi",
+      "name": "NRZ-L / NRZ-I confusion",
+      "description": "Treating NRZ-L as transition-based. NRZ-L is level-based; NRZ-I encodes by transition at the bit boundary.",
+      "detect": "level_vs_transition_mismatch"
+    },
+    {
+      "id": "manchester_convention",
+      "name": "Manchester convention flip",
+      "description": "Using the G.E. Thomas mapping (1 = high-then-low) where IEEE 802.3 (1 = low-then-high) is expected.",
+      "detect": "waveform_is_exact_inverse"
+    }
+  ]
+}

@@ -1,0 +1,209 @@
+CLASS : S. E. (E &TC)                                                    SUBJECT : PCS
+
+EXPT. NO. : 7                                                                DATE :
+
+TITLE		: Perform the experiment to study Line codes (NRZ, RZ, AMI, Manchester), Sketch the waveforms for Line codes, Determine the bandwidths of various Line codes.
+
+PREREQUISITES 
+FOR EXPT.	: 1. Spectral analysis of digital waveform
+                          2. Need for line coding
+
+OBJECTIVE	:  1. To study concept of line coding
+                           2. Characteristics of line coding
+                           3. Comparison of different line codes.
+
+APPARATUS	:  
+Sr. No.
+Apparatus
+Range
+1.
+Line coding kit
+
+2.
+DSO 
+Dual Channel, 60 MHz
+THEORY		 :   Line coding is the process of converting digital data to digital signals. We assume that the data, in the form of text, numbers, graphical images, audio or video are stored in computer memory as sequences of bits. Line coding converts a sequence of bits to a digital signal. At the sender, digital data are encoded into a digital signal; at the receiver, the digital data are recreated by decoding the digital signal.
+                     Digital data can be transmitted by various transmission or line codes, such as on -off, polar, bipolar and so on. Each has its own advantages and disadvantages. Among other desirable properties, a line code should have the following properties.
+
+1. DC component:
+                All the cable systems and other communication system, do not allow transmission of a dc signal. Therefore the line signal must have a zero average (dc) value. NRZ bipolar formats usually satisfy this requirement. For this reason, long strings of element sequences having same polarity should not be transmitted.
+
+
+2. Self-clocking capability:
+           Any digital communication system needs symbol or bit synchronization. To ensure synchronization at the receiver the line code waveform must undergo a sufficient number of zero crossings. That means the waveform must always undergo transitions. This is known as the inherent synchronizing or clocking feature. Some of the codes such as the Manchester code pose this feature.
+
+3. Error detection:
+         Some of the line codes such as "duobinary" provide the means of detecting the data errors without introducing additional error detection bits into the data sequence.
+
+4. Bandwidth compression:
+   	The bandwidth of a line code should be as small as possible. The multilevel codes need less bandwidth as compared to the other codes. This happens due to effective utilization of bandwidth.
+
+5. Differential encoding:
+     	The differential encoding is useful for those communication systems where the transmitted waveform sometimes experiences an inversion. In differential encoding, the polarity of encoded waveform is inverted without affecting the data detection.
+
+6. Noise immunity:
+    	The selected PCM format should have very high noise immunity (ability to minimize effects of noise). This is necessary to have minimum number of errors introduced due to noise. The NRZ formats have better immunity than that of the unipolar RZ format.
+
+7. Minimum crosstalk:
+    	The crosstalk between the adjacent channels that are being transmitted should be minimized. To achieve this the amount of energy in the signal al low frequencies should be small.
+
+
+
+
+
+Unipolar RZ format:
+
+
+      The return to zero (RZ) unipolar format is as shown in fig.1. In this format each "0" is represented by an off pulse (ak = 0) and each "1" by an on pulse with amplitude ak = A and a duration of Tb/2, followed by a return to zero level. Therefore, this is called as return to zero (RZ) format. As the voltage level is either +A or zero, this is a unipolar format. (Unipolar means only one polarity). Due to the unipolar nature, the unipolar RZ format has a nonzero DC value. The DC value does not contain any information.
+ 
+Unipolar NRZ format:
+          A non-return to zero (NRZ) format is as shown in fig.2. In this format a logic "1" is represented by a pulse of full bit duration Tb and amplitude +A while a logic "0" is represented by an off pulse or zero amplitude. During the on time, the does not return to zero after half bit period. Therefore, the name is   NRZ format. As the pulses have either +A or 0 amplitude it is called a unipolar format. Internal computer waveforms are usually of this type. Due to unipolar nature, the unipolar NRZ format also will have a nonzero average (dc) value, which does not carry any information. Due to longer pulse duration, the NRZ pulses carry more "energy" than the RZ pulses. But they need synchronization at the receiver, as there is no separation between the adjacent pulses.
+
+
+
+
+
+Polar RZ format:
+	The disadvantages of two unipolar format discussed earlier is that they result in a DC component that does not carry any information and wastes power. The polar RZ format is shown in the fig3. It shows that opposite polarity of pulses of amplitude ? "A/2" are used to represent logic "1" and "0". Therefore, it is called as polar format. As the pulses return to zero after half the bit duration "Tb/ 2" this format is a RZ format.
+
+
+
+Polar NRZ format:
+	In the polar NRZ format, as shown in the fig.4 a pulse of amplitude "+A/2" of duration Tb is used to represent a logic "1" and a pulse of amplitude "-A/2" of the same duration represents a logic"0". Unlike the unipolar waveform has no dc component if the 0s and 1s the input data occur in equal proportion.
+
+
+
+Bipolar NRZ format:
+	The bipolar format is as shown in fig.5.Here the successive "1s" are represented by pulses with alternating polarity, and no pulse is transmitted for logic "0". Note that in this representation there are three levels: +A, 0 and -A. Therefore this is also known as "psuedoternary or alternative mark inversion (AMI)" format.
+
+
+
+	An attractive feature of the bipolar format is absence of a dc component even though the input binary data may contain long strings of "0s" and "1s". Moreover the bipolar format eliminates ambiguity that may arise because of polarity inversion during the course of transmission. (This problem is observed in the switched telephone networks). This is the reason why bipolar NRZ format is used in the PCM-TDM T1 system for digital telephony. The absence of dc component allows the use of transformers for coupling 
+
+Split phase Manchester format:
+	The split phase Manchester format is as shown in fig.6. In this format symbol "1" is represented by transmitting a positive pulse of "+A/2" amplitude for one half of the symbol duration, followed by a negative pulse of amplitude "-A/2" for remaining half of the symbol duration. For symbol "0" these two pulses are transmitted in reverse order. This waveform does not have any dc component. The Manchester format has a in synchronization capacity as it crosses zero at regular intervals. But this capacity is attained at the expense of a bandwidth requirement of twice that of the NRZ unipolar, polar and bipolar formats. Local area networks (LAN) such as Ehternet the Cheapernet are increasingly using the Manchester, code for signal transmission over the network.
+
+
+
+        
+Comparison of Line Codes on the Basis of Power Spectra :
+	Power spectra is a graph of spectral density plotted against frequency. It gives the distribution of power of different frequency components. The power spectra for four important line codes are as shown in fig.7.
+
+
+
+(i) POWER SPECTRA OF NRZ UNIPOLAR: Curve 'a' of fig. 7 shows a normalized graph. Both the power spectral density and frequency are normalized. It is seen from the fig.7 that most of the power pf the NRZ unipolar format is concentrated between dc and the bit rate of input data.
+
+(ii) POWER SPECTRA OF NRZ POLAR FORMAT: Curve 'b' in fig.7 shows a normalized power spectra of NRZ polar format. Here also like unipolar NRZ format, most of the power lies in the main lobe of the sinc shaped curve. This main lobe extends upto a bit rate of 1/Tb.
+
+(iii) NRZ BIPOLAR (AMI) FORMAT: Curve 'c' in fig.7 shows the normalized power spectra for the AMI format. It can be seen that almost all the power lies inside the bandwidth equal to 1/Tb. similar to the two NRZ formats discussed earlier. However the spectral content of the NRZ bipolar format is relatively small around the zero frequency.
+
+(iv) MANCHESTER FORMAT: Curve 'd' in fig.7 shows the normalized power spectra of Manchester format. Here most of the power lies inside the bandwidth equal to 2/Tb. Which is twice the bandwidth of unipolar, polar and bipolar NRZ formats.
+
+DIFFERENCE BETWEEN SOURCE CODING AND LINE CODING:
+	We have discussed various source coding techniques such as PCM, Delta modulation, ADM etc. in the preceding chapter. Source coding techniques are used in order to convert an analog signal to its digitally coded equivalent. The output of a source coder is a train of binary digits i.e. "0s" and "1s".
+	The line coding techniques discussed convert the stream of binary digits into a format or code which is more suitable for transmission over a cable or any other medium. This is because the data transmission must satisfy certain requirements such as synchronization, elimination of dc component, low cross talk, etc. The line code format should be such that the bandwidth requirements be as low as possible. Examples of line codes are RZ, NRZ, AMI, Manchester and other formats.
+
+Comparison of Line Codes:
+
+Sr. No
+Parameter
+Polar RZ
+Polar NRZ
+AMI
+Manchester
+Polar Quaternary NRZ
+1.
+Transmission of DC component
+Yes
+Yes
+No
+No
+Possible
+2.
+Signaling rate
+1/Tb
+1/Tb
+1/Tb
+1/Tb
+1/2Tb
+3.
+Noise immunity
+Low
+Low
+High
+High
+High
+4.
+Synchronizing capability
+Poor
+Poor
+Very good
+Very good 
+Poor
+5.
+Bandwidth required
+2/Tb
+1/Tb
+1/Tb
+2/Tb
+1/2Tb
+6.
+Crosstalk
+High
+High
+Low
+Low
+Low
+PROCEDURE: 
+1. Switch on the power supply
+2. Connect any data format and observe output.
+3. Observe bit pattern together with differential data formats on DSO.
+4. Repeat for other bit patterns.
+
+
+OBSERVATIONS: 
+
+Observe and draw the different waveforms.
+
+GRAPHS:
+   Plot the observed line codes of a given sequence in time domain and frequency domain. Show the bandwidth on graph.   
+     
+CONCLUSION:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+RERFERENCES: 
+
+1.     1. Taub, Schilling and Saha, "Principles of Communication Systems", McGraw-Hill, 4th Edition
+2. B P Lathi, Zhi Ding, "Modern Analog and Digital Communication System", Oxford University Press, 4thEdition
+3. Simon Haykin, "Communication Systems", 4th Edition, John Wiley & 
+Sons
+4. George Kennedy, "Electronic Communication Systems" 5th Edition, 
+McGraw-Hill
+5. Frenzel, "Principles of Electronic Communication Systems"3rd       Edition, Tata McGraw-Hill
+
+
+   
+
+            PUNE INSTITUTE OF COMPUTER TECHNOLOGY, PUNE - 411043
+
+Department of Electronics & Telecommunication Engineering
+
+
+
+
+7.10
+PCS                  
+
+
