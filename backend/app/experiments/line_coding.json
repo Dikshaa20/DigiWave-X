@@ -33,7 +33,7 @@
           "id": "scheme",
           "label": "Encoding Scheme",
           "type": "select",
-          "options": ["nrz", "manchester", "ami"],
+          "options": ["nrz", "nrz_unipolar", "manchester", "ami", "rz_unipolar", "bipolar_rz", "nrzm"],
           "default": "nrz"
         }
       ]

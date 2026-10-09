@@ -1,0 +1,3 @@
+Loading dataset...
+GEMINI_API_KEY set: False (key value not disclosed)
+Dataset: 50 cases ({'concept': 15, 'wiring': 10, 'waveform': 10, 'misconception': 10, 'what-if': 5})

@@ -1,0 +1,1 @@
+{"detail":[{"type":"missing","loc":["body","student_query"],"msg":"Field required","input":{"experiment_id":"line_coding","block_inputs":{"source":{"bits":"10110"},"encoder":{"scheme":"ami"},"scope":{"voltage":1.0}},"connections":[{"from":"source.out","to":"encoder.in"},{"from":"encoder.out","to":"scope.in"}]}}]}

@@ -1,0 +1,1683 @@
+Loading dataset...
+Server pid: 21616
+GEMINI_API_KEY set: False (key not disclosed)
+Dataset: 50 cases ({'concept': 15, 'wiring': 10, 'waveform': 10, 'misconception': 10, 'what-if': 5})
+Measuring RAG retrieval hit rate on server-side KnowledgeBase...
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights:  43%|####2     | 44/103 [00:00<00:00, 439.83it/s]Loading weights:  85%|########5 | 88/103 [00:00<00:00, 380.65it/s]Loading weights: 100%|##########| 103/103 [00:00<00:00, 448.62it/s]
+
+Evaluation report written to C:\Users\Admin\OneDrive\Desktop\DigiWave-X\digiwave-x\backend\evaluation\results.json
+{
+  "meta": {
+    "gemini_api_key_configured": false,
+    "gemini_real_calls": 37,
+    "deterministic_fallback_only": 0,
+    "verification_mode": "automatic",
+    "dataset_size": 50,
+    "category_counts": {
+      "concept": 15,
+      "wiring": 10,
+      "waveform": 10,
+      "misconception": 10,
+      "what-if": 5
+    }
+  },
+  "rag": {
+    "k": 5,
+    "precision_at_k": 8.0,
+    "recall_at_k": 0.8,
+    "retrieval_hit_rate": 0.8
+  },
+  "tutor": {
+    "total_answered": 37,
+    "correctness": 0.0,
+    "groundedness": 0.0,
+    "contradiction_rate": 1.0,
+    "average_confidence": 0.4,
+    "average_latency_ms": 475.848602706793,
+    "human_evaluated": {
+      "specificity": "requires human annotation",
+      "relevance": "requires human annotation"
+    }
+  },
+  "per_case": [
+    {
+      "rank": 1,
+      "id": "c1",
+      "category": "concept",
+      "grounded": "contradiction",
+      "grounding_discrepancies": [
+        "levels mismatch: answer has None but oracle has [1.0, 1.0, 0.0, 0.0, -1.0, -1.0, 1.0, 1.0, 0.0, 0.0]",
+        "transitions mismatch: answer has None but oracle has 4",
+        "quote scheme (missing)"
+      ],
+      "grounding_type": "automatic",
+      "answer": "I couldn't load the tutor model right now (the API key is missing in this environment). Please set GEMINI_API_KEY and try again. The circuit facts below are still deterministic.",
+      "confidence": 0.4,
+      "latency_ms": 2081.5130000119098,
+      "http_status": 200,
+      "deterministic_oracle": {
+        "kind": "line_coding",
+        "scheme": "ami",
+        "bits": [
+          1,
+          0,
+          1,
+          1,
+          0
+        ],
+        "samples_per_bit": 2,
+        "levels": [
+          1.0,
+          1.0,
+          0.0,
+          0.0,
+          -1.0,
+          -1.0,
+          1.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        "dc_component": 0.2,
+        "transitions": 4
+      },
+      "retrieved_chunks": 5
+    },
+    {
+      "rank": 2,
+      "id": "c2",
+      "category": "concept",
+      "grounded": "contradiction",
+      "grounding_discrepancies": [
+        "levels mismatch: answer has None but oracle has [1.0, 1.0, -1.0, -1.0, 1.0, 1.0]",
+        "transitions mismatch: answer has None but oracle has 2",
+        "quote scheme (missing)"
+      ],
+      "grounding_type": "automatic",
+      "answer": "I couldn't load the tutor model right now (the API key is missing in this environment). Please set GEMINI_API_KEY and try again. The circuit facts below are still deterministic.",
+      "confidence": 0.4,
+      "latency_ms": 418.2653999887407,
+      "http_status": 200,
+      "deterministic_oracle": {
+        "kind": "line_coding",
+        "scheme": "nrz",
+        "bits": [
+          1,
+          0,
+          1
+        ],
+        "samples_per_bit": 2,
+        "levels": [
+          1.0,
+          1.0,
+          -1.0,
+          -1.0,
+          1.0,
+          1.0
+        ],
+        "dc_component": 0.3333333333333333,
+        "transitions": 2
+      },
+      "retrieved_chunks": 5
+    },
+    {
+      "rank": 3,
+      "id": "c3",
+      "category": "concept",
+      "grounded": "contradiction",
+      "grounding_discrepancies": [
+        "levels mismatch: answer has None but oracle has [1.0, 1.0, 0.0, 0.0, -1.0, -1.0, 1.0, 1.0, 0.0, 0.0]",
+        "transitions mismatch: answer has None but oracle has 4",
+        "quote scheme (missing)"
+      ],
+      "grounding_type": "automatic",
+      "answer": "I couldn't load the tutor model right now (the API key is missing in this environment). Please set GEMINI_API_KEY and try again. The circuit facts below are still deterministic.",
+      "confidence": 0.4,
+      "latency_ms": 536.0359000042081,
+      "http_status": 200,
+      "deterministic_oracle": {
+        "kind": "line_coding",
+        "scheme": "ami",
+        "bits": [
+          1,
+          0,
+          1,
+          1,
+          0
+        ],
+        "samples_per_bit": 2,
+        "levels": [
+          1.0,
+          1.0,
+          0.0,
+          0.0,
+          -1.0,
+          -1.0,
+          1.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        "dc_component": 0.2,
+        "transitions": 4
+      },
+      "retrieved_chunks": 5
+    },
+    {
+      "rank": 4,
+      "id": "c4",
+      "category": "concept",
+      "grounded": "n/a",
+      "grounding_discrepancies": [
+        "no deterministic oracle attached"
+      ],
+      "grounding_type": "n/a",
+      "answer": "",
+      "confidence": null,
+      "latency_ms": 11.592999973800033,
+      "http_status": 400,
+      "deterministic_oracle": null,
+      "retrieved_chunks": 5
+    },
+    {
+      "rank": 5,
+      "id": "c5",
+      "category": "concept",
+      "grounded": "contradiction",
+      "grounding_discrepancies": [
+        "levels mismatch: answer has None but oracle has [-1.0, 1.0, 1.0, -1.0]",
+        "transitions mismatch: answer has None but oracle has 2",
+        "quote scheme (missing)"
+      ],
+      "grounding_type": "automatic",
+      "answer": "I couldn't load the tutor model right now (the API key is missing in this environment). Please set GEMINI_API_KEY and try again. The circuit facts below are still deterministic.",
+      "confidence": 0.4,
+      "latency_ms": 610.6139999465086,
+      "http_status": 200,
+      "deterministic_oracle": {
+        "kind": "line_coding",
+        "scheme": "manchester",
+        "bits": [
+          1,
+          0
+        ],
+        "samples_per_bit": 2,
+        "levels": [
+          -1.0,
+          1.0,
+          1.0,
+          -1.0
+        ],
+        "dc_component": 0.0,
+        "transitions": 2
+      },
+      "retrieved_chunks": 5
+    },
+    {
+      "rank": 6,
+      "id": "c6",
+      "category": "concept",
+      "grounded": "contradiction",
+      "grounding_discrepancies": [
+        "levels mismatch: answer has None but oracle has [-1.0, 1.0]",
+        "transitions mismatch: answer has None but oracle has 1",
+        "quote scheme (missing)"
+      ],
+      "grounding_type": "automatic",
+      "answer": "I couldn't load the tutor model right now (the API key is missing in this environment). Please set GEMINI_API_KEY and try again. The circuit facts below are still deterministic.",
+      "confidence": 0.4,
+      "latency_ms": 339.5469000097364,
+      "http_status": 200,
+      "deterministic_oracle": {
+        "kind": "line_coding",
+        "scheme": "manchester",
+        "bits": [
+          1
+        ],
+        "samples_per_bit": 2,
+        "levels": [
+          -1.0,
+          1.0
+        ],
+        "dc_component": 0.0,
+        "transitions": 1
+      },
+      "retrieved_chunks": 5
+    },
+    {
+      "rank": 7,
+      "id": "c7",
+      "category": "concept",
+      "grounded": "n/a",
+      "grounding_discrepancies": [
+        "no deterministic oracle attached"
+      ],
+      "grounding_type": "n/a",
+      "answer": "",
+      "confidence": null,
+      "latency_ms": 9.557100012898445,
+      "http_status": 400,
+      "deterministic_oracle": null,
+      "retrieved_chunks": 5
+    },
+    {
+      "rank": 8,
+      "id": "c8",
+      "category": "concept",
+      "grounded": "contradiction",
+      "grounding_discrepancies": [
+        "levels mismatch: answer has None but oracle has [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+        "transitions mismatch: answer has None but oracle has 0",
+        "quote scheme (missing)"
+      ],
+      "grounding_type": "automatic",
+      "answer": "I couldn't load the tutor model right now (the API key is missing in this environment). Please set GEMINI_API_KEY and try again. The circuit facts below are still deterministic.",
+      "confidence": 0.4,
+      "latency_ms": 574.9461999512278,
+      "http_status": 200,
+      "deterministic_oracle": {
+        "kind": "line_coding",
+        "scheme": "ami",
+        "bits": [
+          0,
+          0,
+          0
+        ],
+        "samples_per_bit": 2,
+        "levels": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "dc_component": 0.0,
+        "transitions": 0
+      },
+      "retrieved_chunks": 5
+    },
+    {
+      "rank": 9,
+      "id": "c9",
+      "category": "concept",
+      "grounded": "n/a",
+      "grounding_discrepancies": [
+        "no deterministic oracle attached"
+      ],
+      "grounding_type": "n/a",
+      "answer": "",
+      "confidence": null,
+      "latency_ms": 6.330800009891391,
+      "http_status": 400,
+      "deterministic_oracle": null,
+      "retrieved_chunks": 5
+    },
+    {
+      "rank": 10,
+      "id": "c10",
+      "category": "concept",
+      "grounded": "contradiction",
+      "grounding_discrepancies": [
+        "levels mismatch: answer has None but oracle has [1.0, 1.0, -1.0, -1.0, 1.0, 1.0]",
+        "transitions mismatch: answer has None but oracle has 2",
+        "quote scheme (missing)"
+      ],
+      "grounding_type": "automatic",
+      "answer": "I couldn't load the tutor model right now (the API key is missing in this environment). Please set GEMINI_API_KEY and try again. The circuit facts below are still deterministic.",
+      "confidence": 0.4,
+      "latency_ms": 362.8921000054106,
+      "http_status": 200,
+      "deterministic_oracle": {
+        "kind": "line_coding",
+        "scheme": "nrz",
+        "bits": [
+          1,
+          0,
+          1
+        ],
+        "samples_per_bit": 2,
+        "levels": [
+          1.0,
+          1.0,
+          -1.0,
+          -1.0,
+          1.0,
+          1.0
+        ],
+        "dc_component": 0.3333333333333333,
+        "transitions": 2
+      },
+      "retrieved_chunks": 5
+    },
+    {
+      "rank": 11,
+      "id": "c11",
+      "category": "concept",
+      "grounded": "contradiction",
+      "grounding_discrepancies": [
+        "levels mismatch: answer has None but oracle has [-1.0, 1.0, 1.0, -1.0, -1.0, 1.0, -1.0, 1.0, 1.0, -1.0]",
+        "transitions mismatch: answer has None but oracle has 6",
+        "quote scheme (missing)"
+      ],
+      "grounding_type": "automatic",
+      "answer": "I couldn't load the tutor model right now (the API key is missing in this environment). Please set GEMINI_API_KEY and try again. The circuit facts below are still deterministic.",
+      "confidence": 0.4,
+      "latency_ms": 411.01000003982335,
+      "http_status": 200,
+      "deterministic_oracle": {
+        "kind": "line_coding",
+        "scheme": "manchester",
+        "bits": [
+          1,
+          0,
+          1,
+          1,
+          0
+        ],
+        "samples_per_bit": 2,
+        "levels": [
+          -1.0,
+          1.0,
+          1.0,
+          -1.0,
+          -1.0,
+          1.0,
+          -1.0,
+          1.0,
+          1.0,
+          -1.0
+        ],
+        "dc_component": 0.0,
+        "transitions": 6
+      },
+      "retrieved_chunks": 5
+    },
+    {
+      "rank": 12,
+      "id": "c12",
+      "category": "concept",
+      "grounded": "contradiction",
+      "grounding_discrepancies": [
+        "levels mismatch: answer has None but oracle has [1.0, 1.0, 1.0, 1.0, -1.0, -1.0, -1.0, -1.0, 1.0, 1.0]",
+        "transitions mismatch: answer has None but oracle has 2",
+        "quote scheme (missing)"
+      ],
+      "grounding_type": "automatic",
+      "answer": "I couldn't load the tutor model right now (the API key is missing in this environment). Please set GEMINI_API_KEY and try again. The circuit facts below are still deterministic.",
+      "confidence": 0.4,
+      "latency_ms": 419.61650003213435,
+      "http_status": 200,
+      "deterministic_oracle": {
+        "kind": "line_coding",
+        "scheme": "nrz",
+        "bits": [
+          1,
+          1,
+          0,
+          0,
+          1
+        ],
+        "samples_per_bit": 2,
+        "levels": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          -1.0,
+          -1.0,
+          -1.0,
+          -1.0,
+          1.0,
+          1.0
+        ],
+        "dc_component": 0.2,
+        "transitions": 2
+      },
+      "retrieved_chunks": 5
+    },
+    {
+      "rank": 13,
+      "id": "c13",
+      "category": "concept",
+      "grounded": "contradiction",
+      "grounding_discrepancies": [
+        "levels mismatch: answer has None but oracle has [1.0, 1.0, 0.0, 0.0, -1.0, -1.0]",
+        "transitions mismatch: answer has None but oracle has 2",
+        "quote scheme (missing)"
+      ],
+      "grounding_type": "automatic",
+      "answer": "I couldn't load the tutor model right now (the API key is missing in this environment). Please set GEMINI_API_KEY and try again. The circuit facts below are still deterministic.",
+      "confidence": 0.4,
+      "latency_ms": 349.15470000123605,
+      "http_status": 200,
+      "deterministic_oracle": {
+        "kind": "line_coding",
+        "scheme": "ami",
+        "bits": [
+          1,
+          0,
+          1
+        ],
+        "samples_per_bit": 2,
+        "levels": [
+          1.0,
+          1.0,
+          0.0,
+          0.0,
+          -1.0,
+          -1.0
+        ],
+        "dc_component": 0.0,
+        "transitions": 2
+      },
+      "retrieved_chunks": 5
+    },
+    {
+      "rank": 14,
+      "id": "c14",
+      "category": "concept",
+      "grounded": "contradiction",
+      "grounding_discrepancies": [
+        "levels mismatch: answer has None but oracle has [-1.0, 1.0, 1.0, -1.0]",
+        "transitions mismatch: answer has None but oracle has 2",
+        "quote scheme (missing)"
+      ],
+      "grounding_type": "automatic",
+      "answer": "I couldn't load the tutor model right now (the API key is missing in this environment). Please set GEMINI_API_KEY and try again. The circuit facts below are still deterministic.",
+      "confidence": 0.4,
+      "latency_ms": 514.2117000068538,
+      "http_status": 200,
+      "deterministic_oracle": {
+        "kind": "line_coding",
+        "scheme": "manchester",
+        "bits": [
+          1,
+          0
+        ],
+        "samples_per_bit": 2,
+        "levels": [
+          -1.0,
+          1.0,
+          1.0,
+          -1.0
+        ],
+        "dc_component": 0.0,
+        "transitions": 2
+      },
+      "retrieved_chunks": 5
+    },
+    {
+      "rank": 15,
+      "id": "c15",
+      "category": "concept",
+      "grounded": "contradiction",
+      "grounding_discrepancies": [
+        "levels mismatch: answer has None but oracle has [1.0, 1.0, -1.0, -1.0, 1.0, 1.0]",
+        "transitions mismatch: answer has None but oracle has 2",
+        "quote scheme (missing)"
+      ],
+      "grounding_type": "automatic",
+      "answer": "I couldn't load the tutor model right now (the API key is missing in this environment). Please set GEMINI_API_KEY and try again. The circuit facts below are still deterministic.",
+      "confidence": 0.4,
+      "latency_ms": 381.71929999953136,
+      "http_status": 200,
+      "deterministic_oracle": {
+        "kind": "line_coding",
+        "scheme": "nrz",
+        "bits": [
+          1,
+          0,
+          1
+        ],
+        "samples_per_bit": 2,
+        "levels": [
+          1.0,
+          1.0,
+          -1.0,
+          -1.0,
+          1.0,
+          1.0
+        ],
+        "dc_component": 0.3333333333333333,
+        "transitions": 2
+      },
+      "retrieved_chunks": 5
+    },
+    {
+      "rank": 16,
+      "id": "w1",
+      "category": "wiring",
+      "grounded": "contradiction",
+      "grounding_discrepancies": [
+        "levels mismatch: answer has None but oracle has [1.0, 1.0, 0.0, 0.0, -1.0, -1.0]",
+        "transitions mismatch: answer has None but oracle has 2",
+        "quote scheme (missing)"
+      ],
+      "grounding_type": "automatic",
+      "answer": "I couldn't load the tutor model right now (the API key is missing in this environment). Please set GEMINI_API_KEY and try again. The circuit facts below are still deterministic.",
+      "confidence": 0.4,
+      "latency_ms": 464.20760004548356,
+      "http_status": 200,
+      "deterministic_oracle": {
+        "kind": "line_coding",
+        "scheme": "ami",
+        "bits": [
+          1,
+          0,
+          1
+        ],
+        "samples_per_bit": 2,
+        "levels": [
+          1.0,
+          1.0,
+          0.0,
+          0.0,
+          -1.0,
+          -1.0
+        ],
+        "dc_component": 0.0,
+        "transitions": 2
+      },
+      "retrieved_chunks": 0
+    },
+    {
+      "rank": 17,
+      "id": "w2",
+      "category": "wiring",
+      "grounded": "contradiction",
+      "grounding_discrepancies": [
+        "levels mismatch: answer has None but oracle has [-1.0, 1.0, 1.0, -1.0, -1.0, 1.0]",
+        "transitions mismatch: answer has None but oracle has 3",
+        "quote scheme (missing)"
+      ],
+      "grounding_type": "automatic",
+      "answer": "I couldn't load the tutor model right now (the API key is missing in this environment). Please set GEMINI_API_KEY and try again. The circuit facts below are still deterministic.",
+      "confidence": 0.4,
+      "latency_ms": 452.67720002448186,
+      "http_status": 200,
+      "deterministic_oracle": {
+        "kind": "line_coding",
+        "scheme": "manchester",
+        "bits": [
+          1,
+          0,
+          1
+        ],
+        "samples_per_bit": 2,
+        "levels": [
+          -1.0,
+          1.0,
+          1.0,
+          -1.0,
+          -1.0,
+          1.0
+        ],
+        "dc_component": 0.0,
+        "transitions": 3
+      },
+      "retrieved_chunks": 0
+    },
+    {
+      "rank": 18,
+      "id": "w3",
+      "category": "wiring",
+      "grounded": "contradiction",
+      "grounding_discrepancies": [
+        "levels mismatch: answer has None but oracle has [1.0, 1.0, 0.0, 0.0, -1.0, -1.0]",
+        "transitions mismatch: answer has None but oracle has 2",
+        "quote scheme (missing)"
+      ],
+      "grounding_type": "automatic",
+      "answer": "I couldn't load the tutor model right now (the API key is missing in this environment). Please set GEMINI_API_KEY and try again. The circuit facts below are still deterministic.",
+      "confidence": 0.4,
+      "latency_ms": 472.7044000173919,
+      "http_status": 200,
+      "deterministic_oracle": {
+        "kind": "line_coding",
+        "scheme": "ami",
+        "bits": [
+          1,
+          0,
+          1
+        ],
+        "samples_per_bit": 2,
+        "levels": [
+          1.0,
+          1.0,
+          0.0,
+          0.0,
+          -1.0,
+          -1.0
+        ],
+        "dc_component": 0.0,
+        "transitions": 2
+      },
+      "retrieved_chunks": 0
+    },
+    {
+      "rank": 19,
+      "id": "w4",
+      "category": "wiring",
+      "grounded": "contradiction",
+      "grounding_discrepancies": [
+        "levels mismatch: answer has None but oracle has [1.0, 1.0, -1.0, -1.0, 1.0, 1.0]",
+        "transitions mismatch: answer has None but oracle has 2",
+        "quote scheme (missing)"
+      ],
+      "grounding_type": "automatic",
+      "answer": "I couldn't load the tutor model right now (the API key is missing in this environment). Please set GEMINI_API_KEY and try again. The circuit facts below are still deterministic.",
+      "confidence": 0.4,
+      "latency_ms": 403.653499961365,
+      "http_status": 200,
+      "deterministic_oracle": {
+        "kind": "line_coding",
+        "scheme": "nrz",
+        "bits": [
+          1,
+          0,
+          1
+        ],
+        "samples_per_bit": 2,
+        "levels": [
+          1.0,
+          1.0,
+          -1.0,
+          -1.0,
+          1.0,
+          1.0
+        ],
+        "dc_component": 0.3333333333333333,
+        "transitions": 2
+      },
+      "retrieved_chunks": 0
+    },
+    {
+      "rank": 20,
+      "id": "w5",
+      "category": "wiring",
+      "grounded": "contradiction",
+      "grounding_discrepancies": [
+        "levels mismatch: answer has None but oracle has [1.0, 1.0, 0.0, 0.0, -1.0, -1.0]",
+        "transitions mismatch: answer has None but oracle has 2",
+        "quote scheme (missing)"
+      ],
+      "grounding_type": "automatic",
+      "answer": "I couldn't load the tutor model right now (the API key is missing in this environment). Please set GEMINI_API_KEY and try again. The circuit facts below are still deterministic.",
+      "confidence": 0.4,
+      "latency_ms": 449.4363000267185,
+      "http_status": 200,
+      "deterministic_oracle": {
+        "kind": "line_coding",
+        "scheme": "ami",
+        "bits": [
+          1,
+          0,
+          1
+        ],
+        "samples_per_bit": 2,
+        "levels": [
+          1.0,
+          1.0,
+          0.0,
+          0.0,
+          -1.0,
+          -1.0
+        ],
+        "dc_component": 0.0,
+        "transitions": 2
+      },
+      "retrieved_chunks": 0
+    },
+    {
+      "rank": 21,
+      "id": "w6",
+      "category": "wiring",
+      "grounded": "contradiction",
+      "grounding_discrepancies": [
+        "levels mismatch: answer has None but oracle has [-1.0, 1.0, 1.0, -1.0, -1.0, 1.0, -1.0, 1.0, 1.0, -1.0]",
+        "transitions mismatch: answer has None but oracle has 6",
+        "quote scheme (missing)"
+      ],
+      "grounding_type": "automatic",
+      "answer": "I couldn't load the tutor model right now (the API key is missing in this environment). Please set GEMINI_API_KEY and try again. The circuit facts below are still deterministic.",
+      "confidence": 0.4,
+      "latency_ms": 366.13239999860525,
+      "http_status": 200,
+      "deterministic_oracle": {
+        "kind": "line_coding",
+        "scheme": "manchester",
+        "bits": [
+          1,
+          0,
+          1,
+          1,
+          0
+        ],
+        "samples_per_bit": 2,
+        "levels": [
+          -1.0,
+          1.0,
+          1.0,
+          -1.0,
+          -1.0,
+          1.0,
+          -1.0,
+          1.0,
+          1.0,
+          -1.0
+        ],
+        "dc_component": 0.0,
+        "transitions": 6
+      },
+      "retrieved_chunks": 0
+    },
+    {
+      "rank": 22,
+      "id": "w7",
+      "category": "wiring",
+      "grounded": "contradiction",
+      "grounding_discrepancies": [
+        "levels mismatch: answer has None but oracle has [1.0, 1.0, 0.0, 0.0, -1.0, -1.0]",
+        "transitions mismatch: answer has None but oracle has 2",
+        "quote scheme (missing)"
+      ],
+      "grounding_type": "automatic",
+      "answer": "I couldn't load the tutor model right now (the API key is missing in this environment). Please set GEMINI_API_KEY and try again. The circuit facts below are still deterministic.",
+      "confidence": 0.4,
+      "latency_ms": 453.31790001364425,
+      "http_status": 200,
+      "deterministic_oracle": {
+        "kind": "line_coding",
+        "scheme": "ami",
+        "bits": [
+          1,
+          0,
+          1
+        ],
+        "samples_per_bit": 2,
+        "levels": [
+          1.0,
+          1.0,
+          0.0,
+          0.0,
+          -1.0,
+          -1.0
+        ],
+        "dc_component": 0.0,
+        "transitions": 2
+      },
+      "retrieved_chunks": 0
+    },
+    {
+      "rank": 23,
+      "id": "w8",
+      "category": "wiring",
+      "grounded": "contradiction",
+      "grounding_discrepancies": [
+        "levels mismatch: answer has None but oracle has [1.0, 1.0, -1.0, -1.0, 1.0, 1.0]",
+        "transitions mismatch: answer has None but oracle has 2",
+        "quote scheme (missing)"
+      ],
+      "grounding_type": "automatic",
+      "answer": "I couldn't load the tutor model right now (the API key is missing in this environment). Please set GEMINI_API_KEY and try again. The circuit facts below are still deterministic.",
+      "confidence": 0.4,
+      "latency_ms": 419.7398999822326,
+      "http_status": 200,
+      "deterministic_oracle": {
+        "kind": "line_coding",
+        "scheme": "nrz",
+        "bits": [
+          1,
+          0,
+          1
+        ],
+        "samples_per_bit": 2,
+        "levels": [
+          1.0,
+          1.0,
+          -1.0,
+          -1.0,
+          1.0,
+          1.0
+        ],
+        "dc_component": 0.3333333333333333,
+        "transitions": 2
+      },
+      "retrieved_chunks": 0
+    },
+    {
+      "rank": 24,
+      "id": "w9",
+      "category": "wiring",
+      "grounded": "contradiction",
+      "grounding_discrepancies": [
+        "levels mismatch: answer has None but oracle has [1.0, 1.0, 0.0, 0.0, -1.0, -1.0]",
+        "transitions mismatch: answer has None but oracle has 2",
+        "quote scheme (missing)"
+      ],
+      "grounding_type": "automatic",
+      "answer": "I couldn't load the tutor model right now (the API key is missing in this environment). Please set GEMINI_API_KEY and try again. The circuit facts below are still deterministic.",
+      "confidence": 0.4,
+      "latency_ms": 468.733899993822,
+      "http_status": 200,
+      "deterministic_oracle": {
+        "kind": "line_coding",
+        "scheme": "ami",
+        "bits": [
+          1,
+          0,
+          1
+        ],
+        "samples_per_bit": 2,
+        "levels": [
+          1.0,
+          1.0,
+          0.0,
+          0.0,
+          -1.0,
+          -1.0
+        ],
+        "dc_component": 0.0,
+        "transitions": 2
+      },
+      "retrieved_chunks": 0
+    },
+    {
+      "rank": 25,
+      "id": "w10",
+      "category": "wiring",
+      "grounded": "n/a",
+      "grounding_discrepancies": [
+        "no deterministic oracle attached"
+      ],
+      "grounding_type": "n/a",
+      "answer": "",
+      "confidence": null,
+      "latency_ms": 29.277499997988343,
+      "http_status": 400,
+      "deterministic_oracle": null,
+      "retrieved_chunks": 0
+    },
+    {
+      "rank": 26,
+      "id": "f1",
+      "category": "waveform",
+      "grounded": "contradiction",
+      "grounding_discrepancies": [
+        "levels mismatch: answer has None but oracle has [1.0, 1.0, 0.0, 0.0, -1.0, -1.0, 1.0, 1.0, 0.0, 0.0]",
+        "transitions mismatch: answer has None but oracle has 4",
+        "quote scheme (missing)"
+      ],
+      "grounding_type": "automatic",
+      "answer": "I couldn't load the tutor model right now (the API key is missing in this environment). Please set GEMINI_API_KEY and try again. The circuit facts below are still deterministic.",
+      "confidence": 0.4,
+      "latency_ms": 348.603299993556,
+      "http_status": 200,
+      "deterministic_oracle": {
+        "kind": "line_coding",
+        "scheme": "ami",
+        "bits": [
+          1,
+          0,
+          1,
+          1,
+          0
+        ],
+        "samples_per_bit": 2,
+        "levels": [
+          1.0,
+          1.0,
+          0.0,
+          0.0,
+          -1.0,
+          -1.0,
+          1.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        "dc_component": 0.2,
+        "transitions": 4
+      },
+      "retrieved_chunks": 5
+    },
+    {
+      "rank": 27,
+      "id": "f2",
+      "category": "waveform",
+      "grounded": "contradiction",
+      "grounding_discrepancies": [
+        "levels mismatch: answer has None but oracle has [-1.0, 1.0, 1.0, -1.0]",
+        "transitions mismatch: answer has None but oracle has 2",
+        "quote scheme (missing)"
+      ],
+      "grounding_type": "automatic",
+      "answer": "I couldn't load the tutor model right now (the API key is missing in this environment). Please set GEMINI_API_KEY and try again. The circuit facts below are still deterministic.",
+      "confidence": 0.4,
+      "latency_ms": 375.7842000341043,
+      "http_status": 200,
+      "deterministic_oracle": {
+        "kind": "line_coding",
+        "scheme": "manchester",
+        "bits": [
+          1,
+          0
+        ],
+        "samples_per_bit": 2,
+        "levels": [
+          -1.0,
+          1.0,
+          1.0,
+          -1.0
+        ],
+        "dc_component": 0.0,
+        "transitions": 2
+      },
+      "retrieved_chunks": 5
+    },
+    {
+      "rank": 28,
+      "id": "f3",
+      "category": "waveform",
+      "grounded": "contradiction",
+      "grounding_discrepancies": [
+        "levels mismatch: answer has None but oracle has [1.0, 1.0, 0.0, 0.0, -1.0, -1.0, 1.0, 1.0, 0.0, 0.0]",
+        "transitions mismatch: answer has None but oracle has 4",
+        "quote scheme (missing)"
+      ],
+      "grounding_type": "automatic",
+      "answer": "I couldn't load the tutor model right now (the API key is missing in this environment). Please set GEMINI_API_KEY and try again. The circuit facts below are still deterministic.",
+      "confidence": 0.4,
+      "latency_ms": 415.2941000065766,
+      "http_status": 200,
+      "deterministic_oracle": {
+        "kind": "line_coding",
+        "scheme": "ami",
+        "bits": [
+          1,
+          0,
+          1,
+          1,
+          0
+        ],
+        "samples_per_bit": 2,
+        "levels": [
+          1.0,
+          1.0,
+          0.0,
+          0.0,
+          -1.0,
+          -1.0,
+          1.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        "dc_component": 0.2,
+        "transitions": 4
+      },
+      "retrieved_chunks": 5
+    },
+    {
+      "rank": 29,
+      "id": "f4",
+      "category": "waveform",
+      "grounded": "n/a",
+      "grounding_discrepancies": [
+        "no deterministic oracle attached"
+      ],
+      "grounding_type": "n/a",
+      "answer": "",
+      "confidence": null,
+      "latency_ms": 8.11470003100112,
+      "http_status": 400,
+      "deterministic_oracle": null,
+      "retrieved_chunks": 5
+    },
+    {
+      "rank": 30,
+      "id": "f5",
+      "category": "waveform",
+      "grounded": "contradiction",
+      "grounding_discrepancies": [
+        "levels mismatch: answer has None but oracle has [-1.0, 1.0, 1.0, -1.0, -1.0, 1.0]",
+        "transitions mismatch: answer has None but oracle has 3",
+        "quote scheme (missing)"
+      ],
+      "grounding_type": "automatic",
+      "answer": "I couldn't load the tutor model right now (the API key is missing in this environment). Please set GEMINI_API_KEY and try again. The circuit facts below are still deterministic.",
+      "confidence": 0.4,
+      "latency_ms": 381.92130002425984,
+      "http_status": 200,
+      "deterministic_oracle": {
+        "kind": "line_coding",
+        "scheme": "manchester",
+        "bits": [
+          1,
+          0,
+          1
+        ],
+        "samples_per_bit": 2,
+        "levels": [
+          -1.0,
+          1.0,
+          1.0,
+          -1.0,
+          -1.0,
+          1.0
+        ],
+        "dc_component": 0.0,
+        "transitions": 3
+      },
+      "retrieved_chunks": 5
+    },
+    {
+      "rank": 31,
+      "id": "f6",
+      "category": "waveform",
+      "grounded": "contradiction",
+      "grounding_discrepancies": [
+        "levels mismatch: answer has None but oracle has [1.0, 1.0, 1.0, 1.0, 1.0, 1.0]",
+        "transitions mismatch: answer has None but oracle has 0",
+        "quote scheme (missing)"
+      ],
+      "grounding_type": "automatic",
+      "answer": "I couldn't load the tutor model right now (the API key is missing in this environment). Please set GEMINI_API_KEY and try again. The circuit facts below are still deterministic.",
+      "confidence": 0.4,
+      "latency_ms": 419.77969999425113,
+      "http_status": 200,
+      "deterministic_oracle": {
+        "kind": "line_coding",
+        "scheme": "nrz",
+        "bits": [
+          1,
+          1,
+          1
+        ],
+        "samples_per_bit": 2,
+        "levels": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dc_component": 1.0,
+        "transitions": 0
+      },
+      "retrieved_chunks": 5
+    },
+    {
+      "rank": 32,
+      "id": "f7",
+      "category": "waveform",
+      "grounded": "contradiction",
+      "grounding_discrepancies": [
+        "levels mismatch: answer has None but oracle has [1.0, 1.0, 0.0, 0.0, -1.0, -1.0, 1.0, 1.0, 0.0, 0.0]",
+        "transitions mismatch: answer has None but oracle has 4",
+        "quote scheme (missing)"
+      ],
+      "grounding_type": "automatic",
+      "answer": "I couldn't load the tutor model right now (the API key is missing in this environment). Please set GEMINI_API_KEY and try again. The circuit facts below are still deterministic.",
+      "confidence": 0.4,
+      "latency_ms": 408.06829999201,
+      "http_status": 200,
+      "deterministic_oracle": {
+        "kind": "line_coding",
+        "scheme": "ami",
+        "bits": [
+          1,
+          0,
+          1,
+          1,
+          0
+        ],
+        "samples_per_bit": 2,
+        "levels": [
+          1.0,
+          1.0,
+          0.0,
+          0.0,
+          -1.0,
+          -1.0,
+          1.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        "dc_component": 0.2,
+        "transitions": 4
+      },
+      "retrieved_chunks": 5
+    },
+    {
+      "rank": 33,
+      "id": "f8",
+      "category": "waveform",
+      "grounded": "contradiction",
+      "grounding_discrepancies": [
+        "levels mismatch: answer has None but oracle has [-1.0, 1.0, 1.0, -1.0]",
+        "transitions mismatch: answer has None but oracle has 2",
+        "quote scheme (missing)"
+      ],
+      "grounding_type": "automatic",
+      "answer": "I couldn't load the tutor model right now (the API key is missing in this environment). Please set GEMINI_API_KEY and try again. The circuit facts below are still deterministic.",
+      "confidence": 0.4,
+      "latency_ms": 527.8697999892756,
+      "http_status": 200,
+      "deterministic_oracle": {
+        "kind": "line_coding",
+        "scheme": "manchester",
+        "bits": [
+          1,
+          0
+        ],
+        "samples_per_bit": 2,
+        "levels": [
+          -1.0,
+          1.0,
+          1.0,
+          -1.0
+        ],
+        "dc_component": 0.0,
+        "transitions": 2
+      },
+      "retrieved_chunks": 5
+    },
+    {
+      "rank": 34,
+      "id": "f9",
+      "category": "waveform",
+      "grounded": "contradiction",
+      "grounding_discrepancies": [
+        "levels mismatch: answer has None but oracle has [1.0, 1.0, 1.0, 1.0, -1.0, -1.0, -1.0, -1.0, 1.0, 1.0]",
+        "transitions mismatch: answer has None but oracle has 2",
+        "quote scheme (missing)"
+      ],
+      "grounding_type": "automatic",
+      "answer": "I couldn't load the tutor model right now (the API key is missing in this environment). Please set GEMINI_API_KEY and try again. The circuit facts below are still deterministic.",
+      "confidence": 0.4,
+      "latency_ms": 519.0986000234261,
+      "http_status": 200,
+      "deterministic_oracle": {
+        "kind": "line_coding",
+        "scheme": "nrz",
+        "bits": [
+          1,
+          1,
+          0,
+          0,
+          1
+        ],
+        "samples_per_bit": 2,
+        "levels": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          -1.0,
+          -1.0,
+          -1.0,
+          -1.0,
+          1.0,
+          1.0
+        ],
+        "dc_component": 0.2,
+        "transitions": 2
+      },
+      "retrieved_chunks": 5
+    },
+    {
+      "rank": 35,
+      "id": "f10",
+      "category": "waveform",
+      "grounded": "n/a",
+      "grounding_discrepancies": [
+        "no deterministic oracle attached"
+      ],
+      "grounding_type": "n/a",
+      "answer": "",
+      "confidence": null,
+      "latency_ms": 28.394200024195015,
+      "http_status": 400,
+      "deterministic_oracle": null,
+      "retrieved_chunks": 5
+    },
+    {
+      "rank": 36,
+      "id": "m1",
+      "category": "misconception",
+      "grounded": "contradiction",
+      "grounding_discrepancies": [
+        "levels mismatch: answer has None but oracle has [1.0, 1.0, 0.0, 0.0, -1.0, -1.0, 1.0, 1.0, 0.0, 0.0]",
+        "transitions mismatch: answer has None but oracle has 4",
+        "quote scheme (missing)"
+      ],
+      "grounding_type": "automatic",
+      "answer": "I couldn't load the tutor model right now (the API key is missing in this environment). Please set GEMINI_API_KEY and try again. The circuit facts below are still deterministic.",
+      "confidence": 0.4,
+      "latency_ms": 423.315400024876,
+      "http_status": 200,
+      "deterministic_oracle": {
+        "kind": "line_coding",
+        "scheme": "ami",
+        "bits": [
+          1,
+          0,
+          1,
+          1,
+          0
+        ],
+        "samples_per_bit": 2,
+        "levels": [
+          1.0,
+          1.0,
+          0.0,
+          0.0,
+          -1.0,
+          -1.0,
+          1.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        "dc_component": 0.2,
+        "transitions": 4
+      },
+      "retrieved_chunks": 5
+    },
+    {
+      "rank": 37,
+      "id": "m2",
+      "category": "misconception",
+      "grounded": "contradiction",
+      "grounding_discrepancies": [
+        "levels mismatch: answer has None but oracle has [1.0, 1.0, -1.0, -1.0, 1.0, 1.0, -1.0, -1.0]",
+        "transitions mismatch: answer has None but oracle has 3",
+        "quote scheme (missing)"
+      ],
+      "grounding_type": "automatic",
+      "answer": "I couldn't load the tutor model right now (the API key is missing in this environment). Please set GEMINI_API_KEY and try again. The circuit facts below are still deterministic.",
+      "confidence": 0.4,
+      "latency_ms": 456.5350000048056,
+      "http_status": 200,
+      "deterministic_oracle": {
+        "kind": "line_coding",
+        "scheme": "nrz",
+        "bits": [
+          1,
+          0,
+          1,
+          0
+        ],
+        "samples_per_bit": 2,
+        "levels": [
+          1.0,
+          1.0,
+          -1.0,
+          -1.0,
+          1.0,
+          1.0,
+          -1.0,
+          -1.0
+        ],
+        "dc_component": 0.0,
+        "transitions": 3
+      },
+      "retrieved_chunks": 5
+    },
+    {
+      "rank": 38,
+      "id": "m3",
+      "category": "misconception",
+      "grounded": "contradiction",
+      "grounding_discrepancies": [
+        "levels mismatch: answer has None but oracle has [-1.0, 1.0, 1.0, -1.0]",
+        "transitions mismatch: answer has None but oracle has 2",
+        "quote scheme (missing)"
+      ],
+      "grounding_type": "automatic",
+      "answer": "I couldn't load the tutor model right now (the API key is missing in this environment). Please set GEMINI_API_KEY and try again. The circuit facts below are still deterministic.",
+      "confidence": 0.4,
+      "latency_ms": 343.607000017073,
+      "http_status": 200,
+      "deterministic_oracle": {
+        "kind": "line_coding",
+        "scheme": "manchester",
+        "bits": [
+          1,
+          0
+        ],
+        "samples_per_bit": 2,
+        "levels": [
+          -1.0,
+          1.0,
+          1.0,
+          -1.0
+        ],
+        "dc_component": 0.0,
+        "transitions": 2
+      },
+      "retrieved_chunks": 5
+    },
+    {
+      "rank": 39,
+      "id": "m4",
+      "category": "misconception",
+      "grounded": "contradiction",
+      "grounding_discrepancies": [
+        "levels mismatch: answer has None but oracle has [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+        "transitions mismatch: answer has None but oracle has 0",
+        "quote scheme (missing)"
+      ],
+      "grounding_type": "automatic",
+      "answer": "I couldn't load the tutor model right now (the API key is missing in this environment). Please set GEMINI_API_KEY and try again. The circuit facts below are still deterministic.",
+      "confidence": 0.4,
+      "latency_ms": 341.76510001998395,
+      "http_status": 200,
+      "deterministic_oracle": {
+        "kind": "line_coding",
+        "scheme": "ami",
+        "bits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "samples_per_bit": 2,
+        "levels": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "dc_component": 0.0,
+        "transitions": 0
+      },
+      "retrieved_chunks": 5
+    },
+    {
+      "rank": 40,
+      "id": "m5",
+      "category": "misconception",
+      "grounded": "contradiction",
+      "grounding_discrepancies": [
+        "levels mismatch: answer has None but oracle has [1.0, 1.0, -1.0, -1.0, 1.0, 1.0, -1.0, -1.0]",
+        "transitions mismatch: answer has None but oracle has 3",
+        "quote scheme (missing)"
+      ],
+      "grounding_type": "automatic",
+      "answer": "I couldn't load the tutor model right now (the API key is missing in this environment). Please set GEMINI_API_KEY and try again. The circuit facts below are still deterministic.",
+      "confidence": 0.4,
+      "latency_ms": 484.63409999385476,
+      "http_status": 200,
+      "deterministic_oracle": {
+        "kind": "line_coding",
+        "scheme": "nrz",
+        "bits": [
+          1,
+          0,
+          1,
+          0
+        ],
+        "samples_per_bit": 2,
+        "levels": [
+          1.0,
+          1.0,
+          -1.0,
+          -1.0,
+          1.0,
+          1.0,
+          -1.0,
+          -1.0
+        ],
+        "dc_component": 0.0,
+        "transitions": 3
+      },
+      "retrieved_chunks": 5
+    },
+    {
+      "rank": 41,
+      "id": "m6",
+      "category": "misconception",
+      "grounded": "n/a",
+      "grounding_discrepancies": [
+        "no deterministic oracle attached"
+      ],
+      "grounding_type": "n/a",
+      "answer": "",
+      "confidence": null,
+      "latency_ms": 6.870499986689538,
+      "http_status": 400,
+      "deterministic_oracle": null,
+      "retrieved_chunks": 5
+    },
+    {
+      "rank": 42,
+      "id": "m7",
+      "category": "misconception",
+      "grounded": "contradiction",
+      "grounding_discrepancies": [
+        "levels mismatch: answer has None but oracle has [-1.0, 1.0, 1.0, -1.0]",
+        "transitions mismatch: answer has None but oracle has 2",
+        "quote scheme (missing)"
+      ],
+      "grounding_type": "automatic",
+      "answer": "I couldn't load the tutor model right now (the API key is missing in this environment). Please set GEMINI_API_KEY and try again. The circuit facts below are still deterministic.",
+      "confidence": 0.4,
+      "latency_ms": 428.85750002460554,
+      "http_status": 200,
+      "deterministic_oracle": {
+        "kind": "line_coding",
+        "scheme": "manchester",
+        "bits": [
+          1,
+          0
+        ],
+        "samples_per_bit": 2,
+        "levels": [
+          -1.0,
+          1.0,
+          1.0,
+          -1.0
+        ],
+        "dc_component": 0.0,
+        "transitions": 2
+      },
+      "retrieved_chunks": 5
+    },
+    {
+      "rank": 43,
+      "id": "m8",
+      "category": "misconception",
+      "grounded": "n/a",
+      "grounding_discrepancies": [
+        "no deterministic oracle attached"
+      ],
+      "grounding_type": "n/a",
+      "answer": "",
+      "confidence": null,
+      "latency_ms": 16.07539999531582,
+      "http_status": 400,
+      "deterministic_oracle": null,
+      "retrieved_chunks": 5
+    },
+    {
+      "rank": 44,
+      "id": "m9",
+      "category": "misconception",
+      "grounded": "contradiction",
+      "grounding_discrepancies": [
+        "levels mismatch: answer has None but oracle has [1.0, 1.0, 0.0, 0.0, -1.0, -1.0, 1.0, 1.0, 0.0, 0.0]",
+        "transitions mismatch: answer has None but oracle has 4",
+        "quote scheme (missing)"
+      ],
+      "grounding_type": "automatic",
+      "answer": "I couldn't load the tutor model right now (the API key is missing in this environment). Please set GEMINI_API_KEY and try again. The circuit facts below are still deterministic.",
+      "confidence": 0.4,
+      "latency_ms": 416.5351999690756,
+      "http_status": 200,
+      "deterministic_oracle": {
+        "kind": "line_coding",
+        "scheme": "ami",
+        "bits": [
+          1,
+          0,
+          1,
+          1,
+          0
+        ],
+        "samples_per_bit": 2,
+        "levels": [
+          1.0,
+          1.0,
+          0.0,
+          0.0,
+          -1.0,
+          -1.0,
+          1.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        "dc_component": 0.2,
+        "transitions": 4
+      },
+      "retrieved_chunks": 5
+    },
+    {
+      "rank": 45,
+      "id": "m10",
+      "category": "misconception",
+      "grounded": "contradiction",
+      "grounding_discrepancies": [
+        "levels mismatch: answer has None but oracle has [1.0, 1.0, 0.0, 0.0, -1.0, -1.0, 1.0, 1.0, 0.0, 0.0]",
+        "transitions mismatch: answer has None but oracle has 4",
+        "quote scheme (missing)"
+      ],
+      "grounding_type": "automatic",
+      "answer": "I couldn't load the tutor model right now (the API key is missing in this environment). Please set GEMINI_API_KEY and try again. The circuit facts below are still deterministic.",
+      "confidence": 0.4,
+      "latency_ms": 364.60089997854084,
+      "http_status": 200,
+      "deterministic_oracle": {
+        "kind": "line_coding",
+        "scheme": "ami",
+        "bits": [
+          1,
+          0,
+          1,
+          1,
+          0
+        ],
+        "samples_per_bit": 2,
+        "levels": [
+          1.0,
+          1.0,
+          0.0,
+          0.0,
+          -1.0,
+          -1.0,
+          1.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        "dc_component": 0.2,
+        "transitions": 4
+      },
+      "retrieved_chunks": 5
+    },
+    {
+      "rank": 46,
+      "id": "t1",
+      "category": "what-if",
+      "grounded": "n/a",
+      "grounding_discrepancies": [
+        "no deterministic oracle attached"
+      ],
+      "grounding_type": "n/a",
+      "answer": "",
+      "confidence": null,
+      "latency_ms": 416.0068000201136,
+      "http_status": 500,
+      "deterministic_oracle": null,
+      "retrieved_chunks": 5
+    },
+    {
+      "rank": 47,
+      "id": "t2",
+      "category": "what-if",
+      "grounded": "n/a",
+      "grounding_discrepancies": [
+        "no deterministic oracle attached"
+      ],
+      "grounding_type": "n/a",
+      "answer": "",
+      "confidence": null,
+      "latency_ms": 421.13570001674816,
+      "http_status": 500,
+      "deterministic_oracle": null,
+      "retrieved_chunks": 5
+    },
+    {
+      "rank": 48,
+      "id": "t3",
+      "category": "what-if",
+      "grounded": "n/a",
+      "grounding_discrepancies": [
+        "no deterministic oracle attached"
+      ],
+      "grounding_type": "n/a",
+      "answer": "",
+      "confidence": null,
+      "latency_ms": 390.86380001390353,
+      "http_status": 500,
+      "deterministic_oracle": null,
+      "retrieved_chunks": 5
+    },
+    {
+      "rank": 49,
+      "id": "t4",
+      "category": "what-if",
+      "grounded": "n/a",
+      "grounding_discrepancies": [
+        "no deterministic oracle attached"
+      ],
+      "grounding_type": "n/a",
+      "answer": "",
+      "confidence": null,
+      "latency_ms": 382.45889998506755,
+      "http_status": 500,
+      "deterministic_oracle": null,
+      "retrieved_chunks": 5
+    },
+    {
+      "rank": 50,
+      "id": "t5",
+      "category": "what-if",
+      "grounded": "n/a",
+      "grounding_discrepancies": [
+        "no deterministic oracle attached"
+      ],
+      "grounding_type": "n/a",
+      "answer": "",
+      "confidence": null,
+      "latency_ms": 22.094300016760826,
+      "http_status": 400,
+      "deterministic_oracle": null,
+      "retrieved_chunks": 5
+    }
+  ],
+  "human_only_metrics": {
+    "specificity": "require human annotation (did the answer deepen the student's understanding?)",
+    "relevance": "require human annotation (does the answer address the actual question?)"
+  }
+}
